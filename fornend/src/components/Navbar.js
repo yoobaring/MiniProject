@@ -2,7 +2,8 @@ import React from 'react';
 
 const Navbar  = () =>{
     return(
-        <nav class="navbar navbar-inverse">
+        <div>
+            <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">AppMini</a>
@@ -15,6 +16,8 @@ const Navbar  = () =>{
           <button class="btn btn-danger navbar-btn">Button</button>
         </div>
       </nav>
+        </div>
+        
     )
 }
 export default Navbar;
