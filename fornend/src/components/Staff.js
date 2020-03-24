@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 import axios from 'axios'
 import '../App.css';
+import Form from './Form';
 const Staff=(props)=>{
 
 
@@ -18,7 +19,25 @@ const Staff=(props)=>{
         const action = {type:'GET_STAFF',staff: result.data}
         dispatch(action)
       }
-    
+      
+      const deleteStaff = async (staffs_id)=>{
+        await axios.delete(`https://apistaffyoo-api.herokuapp.com/api/staffs/${staffs_id}`)
+        dispatch({type:'DELETE_STAFF',id: staffs_id })
+        getStaffs();
+          
+    }
+    const updateStaff = async (staffs_id) => {
+        await axios.put(`https://apistaffyoo-api.herokuapp.com/api/staffs/${staffs_id}`,form)
+         dispatch(
+             {type:'UPDATE_STAFF',
+             id: staffs_id,
+             staff:{...form, id:  staffs_id}
+         })
+         getStaffs();
+         
+       }
+
+
   
 
     const printStaffs = ()=>{
@@ -29,6 +48,8 @@ const Staff=(props)=>{
                             id: {staff.id} ;
                             {staff.name}  {staff.surname  } ; position :
                             {staff.position} ; time : {staff.time} ; tell : {staff.tell}
+                            <button onClick={ ()=>deleteStaff(staff.id)}>Delete</button>
+                            <button onClick={ ()=>updateStaff(staff.id)}>Update</button>
                     </li> 
                 )
             })
@@ -43,6 +64,7 @@ const Staff=(props)=>{
         <div>
              <ul>
                 {printStaffs()}
+                <Form/>
             </ul>
         </div>
     )
