@@ -7,23 +7,83 @@ const Homepage  = () =>{
     return(
         <div>
             <Navbar/>
-        <h1>แผนกฉุกเฉิน</h1>
-        
-        <h3>โรงพยาบาลดีบุก เป็นโรงพยาบาลระดับทุติยภูมิ 
-            แผนกฉุกเฉินเป็นส่วนหนึ่งของทีมการดูแลรักษาผู้ป่วยอุบัติเหตุฉุกเฉิน 
-            และผู้ป่วยทั่วไปตลอด 24 ชั่วโมง</h3>
-        <h5>โดยมีหน้าที่ให้บริการรักษาพยาบาล 
-            ป้องกันแก่ผู้ป่วย ทุกเพศ ทุกวัย ทั้งชาวไทยและชาวต่างชาติ 
-            โดยเน้นให้การพยาบาลแบบองค์รวมตามมาตรฐานวิชาชีพ 
-            ตั้งแต่การเตรียมความพร้อมในการเข้าถึงหรือการรับบริการของผู้ป่วยก่อนมาถึงโรงพยาบาลและการเชื่อมโยงกับเครือข่ายต่างๆ 
-            ที่สามารถประสานเพื่อขอความช่วยเหลือได้ในกรณีภาวะฉุกเฉินหรือเร่งด่วนทั้งภายในจังหวัดภูเก็ต 
-            การปฐมพยาบาลเบื้องต้น (first aid) ณ จุดเกิดเหตุก่อนนำส่งโรงพยาบาล การนำส่งผู้ป่วย (refer) 
-            การพยาบาลผู้ป่วยตั้งแต่แรกรับ การส่งต่อผู้ป่วยไปยังแผนกต่างๆ 
-            โดยเชื่อมโยงกับทีมสหสาขาวิชาชีพที่เกี่ยวข้องภายในโรงพยาบาล 
-            และการส่งต่อการรักษาผู้ป่วยที่มีปัญหาซับซ้อนไปยังโรงพยาบาลอื่นได้อย่างต่อเนื่อง 
-            ถูกต้อง ปลอดภัย และรวดเร็ว ผู้รับบริการพึงพอใจ ดังนั้นแผนกฉุกเฉิน 
-            จึงต้องมีความพร้อมในการรับดูแลผู้ป่วยฉุกเฉินทุกประเภท 
-            รวมถึงระบบการส่งต่อผู้ป่วยไปยังโรงพยาบาลที่มีศักยภาพสูงกว่า</h5>    
+ 
+        <div className="slider-area">
+  {/* Slider */}
+  <div className="block-slider block-slider4">
+    <ul className id="bxslider-home4">
+      <li>
+        <img src="img/h4-slide.png" alt="Slide" />
+        <div className="caption-group">
+          <h2 className="caption title">
+            iPhone{" "}
+            <span className="primary">
+              6 <strong>Plus</strong>
+            </span>
+          </h2>
+          <h4 className="caption subtitle">Dual SIM</h4>
+          <a className="caption button-radius" href="single-product.html">
+            <span className="icon" />
+            Shop now
+          </a>
+        </div>
+      </li>
+      <li>
+        <img src="img/h4-slide2.png" alt="Slide" />
+        <div className="caption-group">
+          <h2 className="caption title">
+            by one, get one{" "}
+            <span className="primary">
+              50% <strong>off</strong>
+            </span>
+          </h2>
+          <h4 className="caption subtitle">
+            school supplies &amp; backpacks.*
+          </h4>
+          <a className="caption button-radius" href="single-product.html">
+            <span className="icon" />
+            Shop now
+          </a>
+        </div>
+      </li>
+      <li>
+        <img src="img/h4-slide3.png" alt="Slide" />
+        <div className="caption-group">
+          <h2 className="caption title">
+            Apple{" "}
+            <span className="primary">
+              Store <strong>Ipod</strong>
+            </span>
+          </h2>
+          <h4 className="caption subtitle">Select Item</h4>
+          <a className="caption button-radius" href="single-product.html">
+            <span className="icon" />
+            Shop now
+          </a>
+        </div>
+      </li>
+      <li>
+        <img src="img/h4-slide4.png" alt="Slide" />
+        <div className="caption-group">
+          <h2 className="caption title">
+            Apple{" "}
+            <span className="primary">
+              Store <strong>Ipod</strong>
+            </span>
+          </h2>
+          <h4 className="caption subtitle">&amp; Phone</h4>
+          <a className="caption button-radius" href="single-product.html">
+            <span className="icon" />
+            Shop now
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {/* ./Slider */}
+</div>
+<Staff/>
+      
         </div>
     
     )
